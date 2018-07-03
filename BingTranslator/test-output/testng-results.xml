@@ -1,37 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="1" ignored="0" total="7" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="72983" started-at="2018-07-02T10:17:55Z" finished-at="2018-07-02T10:19:08Z">
+  <suite name="Default suite" duration-ms="24895" started-at="2018-07-03T10:21:28Z" finished-at="2018-07-03T10:21:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="72983" started-at="2018-07-02T10:17:55Z" finished-at="2018-07-02T10:19:08Z">
+    <test name="Default test" duration-ms="24895" started-at="2018-07-03T10:21:28Z" finished-at="2018-07-03T10:21:52Z">
       <class name="TestTranslation.TestBingTranslator">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeClass" is-config="true" duration-ms="4798" started-at="2018-07-02T10:17:55Z" finished-at="2018-07-02T10:18:00Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeClass" is-config="true" duration-ms="6453" started-at="2018-07-03T10:21:28Z" finished-at="2018-07-03T10:21:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="1646" started-at="2018-07-02T10:18:00Z" finished-at="2018-07-02T10:18:01Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="627" started-at="2018-07-03T10:21:34Z" finished-at="2018-07-03T10:21:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="autoDetecting()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="autoDetecting" duration-ms="5278" started-at="2018-07-02T10:18:01Z" finished-at="2018-07-02T10:18:07Z">
+        <test-method status="PASS" signature="autoDetecting()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="autoDetecting" duration-ms="3223" started-at="2018-07-03T10:21:35Z" finished-at="2018-07-03T10:21:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- autoDetecting -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="1371" started-at="2018-07-02T10:18:07Z" finished-at="2018-07-02T10:18:08Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="540" started-at="2018-07-03T10:21:38Z" finished-at="2018-07-03T10:21:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="moreThan5000Characters()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="moreThan5000Characters" duration-ms="53799" started-at="2018-07-02T10:18:08Z" finished-at="2018-07-02T10:19:02Z">
+        <test-method status="FAIL" signature="cleanButtonFunctionality()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="cleanButtonFunctionality" duration-ms="2068" started-at="2018-07-03T10:21:38Z" finished-at="2018-07-03T10:21:41Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[element not visible
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'HPDB0273', ip: '10.0.36.70', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\ANOOPK~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: c344be0c94f44f222b19607648df2b51]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'HPDB0273', ip: '10.0.36.70', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\ANOOPK~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 67.0.3396.99, webStorageEnabled: true}
+Session ID: c344be0c94f44f222b19607648df2b51
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at TestTranslation.FunctionsToTestBing.checkForCleanButton(FunctionsToTestBing.java:59)
+at TestTranslation.TestBingTranslator.cleanButtonFunctionality(TestBingTranslator.java:49)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- moreThan5000Characters -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="898" started-at="2018-07-02T10:19:02Z" finished-at="2018-07-02T10:19:03Z">
+        </test-method> <!-- cleanButtonFunctionality -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="553" started-at="2018-07-03T10:21:41Z" finished-at="2018-07-03T10:21:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="properTranslation()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="properTranslation" duration-ms="5171" started-at="2018-07-02T10:19:03Z" depends-on-methods="TestTranslation.TestBingTranslator.autoDetecting" finished-at="2018-07-02T10:19:08Z">
+        <test-method status="PASS" signature="dropdownPresentAndExpandablre()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="dropdownPresentAndExpandablre" duration-ms="20" started-at="2018-07-03T10:21:41Z" finished-at="2018-07-03T10:21:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dropdownPresentAndExpandablre -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="619" started-at="2018-07-03T10:21:41Z" finished-at="2018-07-03T10:21:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="swapButtonFuctionality()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="swapButtonFuctionality" duration-ms="2085" started-at="2018-07-03T10:21:42Z" finished-at="2018-07-03T10:21:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- swapButtonFuctionality -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="565" started-at="2018-07-03T10:21:44Z" finished-at="2018-07-03T10:21:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="whetherBoxIsEditable()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="whetherBoxIsEditable" duration-ms="2135" started-at="2018-07-03T10:21:44Z" finished-at="2018-07-03T10:21:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whetherBoxIsEditable -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="934" started-at="2018-07-03T10:21:47Z" finished-at="2018-07-03T10:21:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="whetherBoxIsNonEditable()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="whetherBoxIsNonEditable" duration-ms="2088" started-at="2018-07-03T10:21:47Z" finished-at="2018-07-03T10:21:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- whetherBoxIsNonEditable -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="beforeMethod" is-config="true" duration-ms="739" started-at="2018-07-03T10:21:50Z" finished-at="2018-07-03T10:21:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="properTranslation()[pri:0, instance:TestTranslation.TestBingTranslator@5e3a8624]" name="properTranslation" duration-ms="2190" started-at="2018-07-03T10:21:50Z" depends-on-methods="TestTranslation.TestBingTranslator.autoDetecting" finished-at="2018-07-03T10:21:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- properTranslation -->

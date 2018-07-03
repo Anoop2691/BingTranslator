@@ -14,6 +14,9 @@ public class FunctionsToTestBing {
 
 	public FunctionsToTestBing(WebDriver driver) {
 		this.driver = driver;
+		js = (JavascriptExecutor) this.driver;
+		driver.get("https://www.bing.com/translator");
+		Assert.assertEquals("Bing Microsoft Translator", driver.getTitle());
 	}
 	public WebElement getLeftLanguageDropDown() {
 		return driver.findElement(By.id("t_sl"));
@@ -23,19 +26,71 @@ public class FunctionsToTestBing {
 		return driver.findElement(By.id("t_tl"));
 	}
 
+	public WebElement getSwapButtonLocator() {
+		return driver.findElement(By.id("t_revIcon"));
+	}
+	
 	public WebElement getTextFromFirstBox() {
 		return driver.findElement(By.id("t_sv"));
 	}
-
+	
+	public WebElement getCleanButton() {
+		return driver.findElement(By.xpath("//*[@id=\"t_edc\"]"));
+	}
 	public WebElement getTextFromSecondBox() {
 		return driver.findElement(By.id("t_tv"));
 	}
-
+	public void DropDownIsPresentAndExpandable() {
+	    Assert.assertTrue(driver.findElements(By.id("t_sl")).size() > 0 ? true : false);
+	}
+	public void checkForEditableBox() throws InterruptedException {
+		Thread.sleep(2000);
+		getTextFromFirstBox().sendKeys("Gracias");
+		String textBox1Data = (String) js.executeScript("return document.getElementById(\"t_sv\").value");
+		Assert.assertEquals("Gracias", textBox1Data);
+	}
+	public void checkForCleanButton() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		getCleanButton().click();
+		String textBox1Data = (String) js.executeScript("return document.getElementById(\"t_sv\").value");
+		Assert.assertEquals("", textBox1Data);
+	}
+	public void checkForNonEditableBox() {	
+		getTextFromSecondBox().sendKeys("Gracias");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String textBox2Data = (String) js.executeScript("return document.getElementById(\"t_tv\").value");
+		Assert.assertTrue(!textBox2Data.equals("Gracias"));
+	}
+	public void checkForSwapButtonWorking() {
+		String textBox1Data = (String) js.executeScript("return document.getElementById(\"t_sv\").value");
+		String textBox2Data = (String) js.executeScript("return document.getElementById(\"t_tv\").value");
+		getSwapButtonLocator().click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String textBox1DataAfterSwap = (String) js.executeScript("return document.getElementById(\"t_sv\").value");
+		String textBox2DataAfterSwap = (String) js.executeScript("return document.getElementById(\"t_tv\").value");
+		Assert.assertEquals(textBox1Data,textBox2DataAfterSwap);
+		Assert.assertEquals(textBox2Data,textBox1DataAfterSwap);
+	}
 	public void gettingLanguage() {
 		getTextFromFirstBox().sendKeys("hi");
 		Thread thread = new Thread();
 		try {
-			thread.sleep(5000);
+			thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -50,11 +105,10 @@ public class FunctionsToTestBing {
 		Select dropdown = new Select(getRightLanguageDropDown());
 		dropdown.selectByVisibleText("English");
 		try {
-			thread.sleep(5000);
+			thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		js = (JavascriptExecutor) this.driver;
 		String textBox2Data = (String) js.executeScript("return document.getElementById(\"t_tv\").value");
 		Assert.assertTrue(textBox2Data.equals("Thank you"));
 
@@ -81,7 +135,7 @@ public class FunctionsToTestBing {
 		getTextFromFirstBox().sendKeys(sentence);
 		Thread thread = new Thread();
 		try {
-			thread.sleep(5000);
+			thread.sleep(2000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

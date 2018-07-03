@@ -5,11 +5,9 @@
     <classes>
       <class name="TestTranslation.TestBingTranslator">
         <methods>
-          <include name="autoDetecting"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
-          <include name="afterClass"/>
-          <include name="properTranslation"/>
+          <include name="cleanButtonFunctionality"/>
         </methods>
       </class> <!-- TestTranslation.TestBingTranslator -->
     </classes>

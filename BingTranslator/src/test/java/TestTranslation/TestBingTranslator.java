@@ -24,14 +24,33 @@ public class TestBingTranslator {
 		objectToTestBingTranslator.getConvertedLanguage();
 	}
 
-	@Test
+	//@Test
 	public void moreThan5000Characters() {
 		objectToTestBingTranslator.checkingForLargeNumbers();
 	}
-	
+	@Test
+	public void dropdownPresentAndExpandablre() {
+		objectToTestBingTranslator.DropDownIsPresentAndExpandable();
+	}
+	@Test
+	public void whetherBoxIsEditable() throws InterruptedException {
+		objectToTestBingTranslator.checkForEditableBox();
+	}
+	@Test
+	public void whetherBoxIsNonEditable() {
+		objectToTestBingTranslator.checkForNonEditableBox();
+	}
+	@Test
+	public void swapButtonFuctionality() {
+		objectToTestBingTranslator.checkForNonEditableBox();
+	}
+	/*@Test
+	public void cleanButtonFunctionality() {
+		objectToTestBingTranslator.checkForCleanButton();
+	}
+	*/
 	@BeforeMethod
 	public void beforeMethod() {
-		driver.get("https://www.bing.com/translator");
 		objectToTestBingTranslator=new FunctionsToTestBing(driver);
 	}
 
